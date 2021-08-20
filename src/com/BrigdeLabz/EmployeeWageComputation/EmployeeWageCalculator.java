@@ -1,26 +1,31 @@
 package com.BrigdeLabz.EmployeeWageComputation;
 
 public class EmployeeWageCalculator {
+	public static final int IS_PART_TIME = 1;
+	public static final int IS_FULL_TIME = 2;
+	public static final int EMPLOYEE_RATE_PER_HOUR = 20;
+
 	public static void main(String[] args) {
 		System.out.println("***** Welcome to Employee Wage Computation *****");
-		int isPartTime = 1;
-		int isFullTime = 2;
-		int employeeRatePerHour = 20;
 		int employeeHours = 0;
 		int employeeWage = 0;
-		double employeeCheck = Math.floor(Math.random() * 10) % 3;
+		int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
 
-		if (employeeCheck == isFullTime) {
+		switch (employeeCheck) {
+		case IS_FULL_TIME:
 			employeeHours = 8;
-			
-		} else if (employeeCheck == isPartTime) {
+			break;
+
+		case IS_PART_TIME:
 			employeeHours = 4;
-			
-		} else {
+			break;
+
+		case 0:
 			employeeHours = 0;
+			break;
 		}
 
-		employeeWage = employeeHours * employeeRatePerHour;
+		employeeWage = employeeHours * EMPLOYEE_RATE_PER_HOUR;
 		System.out.println("Employee wage: " + employeeWage);
 	}
 }
