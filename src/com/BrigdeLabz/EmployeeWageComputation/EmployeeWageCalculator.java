@@ -6,9 +6,8 @@ public class EmployeeWageCalculator {
 	public static final int EMPLOYEE_RATE_PER_HOUR = 20;
 	public static final int NO_OF_WORKING_DAYS = 20;
 	public static final int MAX_HOURS_IN_MONTH = 100;
-
-	public static void main(String[] args) {
-		System.out.println("***** Welcome to Employee Wage Computation *****");
+	
+	public static void employeeWage() {
 		int employeeHours = 0;
 		int totalEmployeeWage = 0;
 		int totalEmployeeHours = 0;
@@ -30,9 +29,14 @@ public class EmployeeWageCalculator {
 				break;
 			}
 			totalEmployeeHours += employeeHours;
-			System.out.println("day: " + totalWorkingDays + " Employee Hour: " + employeeHours);
+			System.out.println("day: " + totalWorkingDays + " Employee Wage: " + employeeHours * EMPLOYEE_RATE_PER_HOUR);
 		}
 		totalEmployeeWage = totalEmployeeHours * EMPLOYEE_RATE_PER_HOUR;
 		System.out.println("Total Employee wage: " + totalEmployeeWage);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("***** Welcome to Employee Wage Computation *****");
+		employeeWage();
 	}
 }
