@@ -8,7 +8,7 @@ public class EmployeeWageCalculator {
 		int isPresent = 1;
 		int employeeHours = 0;
 		int employeeWage = 0;
-		int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
+		int employeeCheck = (int) Math.floor(Math.random() * 10) % 2;
 		if (employeeCheck == isPresent) {
 			employeeHours = 8;
 		}
